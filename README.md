@@ -14,7 +14,7 @@ How to use it? 🎉
 2. Navigate to the folder: `cd BlockVote`
 3. Install dependencies: `npm install`
 4. Insatll truflle
-5. mirgate Contract: truffle migrate --network matic
-6. compile:truffle compile
+5. mirgate Contract: `truffle migrate --network matic`
+6. compile:`truffle compile`
 7. Run server: `npm run dev`
 
