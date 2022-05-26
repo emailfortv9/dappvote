@@ -74,9 +74,9 @@
   "sourceMap": "27:457:1:-;;;179:50;8:9:-1;5:2;;;30:1;27;20:12;5:2;179:50:1;214:10;206:5;;:18;;;;;;;;;;;;;;;;;;27:457;;;;;;",
   "deployedSourceMap": "27:457:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:457:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;328:154;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;328:154:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;75:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;51:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;233:91;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;233:91:1;;;;;;;;;;;;;;;;;:::i;:::-;;328:154;379:19;412:11;379:45;;430:8;:21;;;452:24;;430:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;430:47:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;430:47:1;;;;328:154;;:::o;75:36::-;;;;:::o;51:20::-;;;;;;;;;;;;;:::o;233:91::-;310:9;283:24;:36;;;;233:91;:::o",
   "source": "pragma solidity >=0.5.16;\n\ncontract Migrations {\n  address public owner;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n  constructor () public{\n    owner = msg.sender;\n  }\n\n  function setCompleted(uint completed) public{\n    last_completed_migration = completed;\n  }\n\n  function upgrade(address new_address) public {\n    Migrations upgraded = Migrations(new_address);\n    upgraded.setCompleted(last_completed_migration);\n  }\n}",
-  "sourcePath": "project:contracts\\Migrations.sol",
+  "sourcePath": "contracts\\Migrations.sol",
   "ast": {
-    "absolutePath": "project:/contracts/Migrations.sol",
+    "absolutePath": "contracts/Migrations.sol",
     "exportedSymbols": {
       "Migrations": [
         175
