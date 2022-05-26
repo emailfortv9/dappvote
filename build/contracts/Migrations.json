@@ -76,7 +76,7 @@
   "source": "pragma solidity >=0.5.16;\n\ncontract Migrations {\n  address public owner;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n  constructor () public{\n    owner = msg.sender;\n  }\n\n  function setCompleted(uint completed) public{\n    last_completed_migration = completed;\n  }\n\n  function upgrade(address new_address) public {\n    Migrations upgraded = Migrations(new_address);\n    upgraded.setCompleted(last_completed_migration);\n  }\n}",
   "sourcePath": "project:contracts\\Migrations.sol",
   "ast": {
-    "absolutePath": "project:/contracts/Migrations.sol",
+    "absolutePath": "contracts/Migrations.sol",
     "exportedSymbols": {
       "Migrations": [
         175
